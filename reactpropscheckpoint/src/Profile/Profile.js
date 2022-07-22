@@ -6,7 +6,7 @@ const Profile = (props) => {
     <>
     <div className='myprofile'>
        {props.children}
-        <img src={props.person.image} alt="" style={{ width: 350, height: 350 , borderRadius: '50%' }} />
+        <img src={props.person.image} alt=""/>
        
         <div className='myname'>
             <h1>

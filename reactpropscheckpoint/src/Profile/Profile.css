@@ -9,6 +9,9 @@
 img{
     margin-top: 60px;
     box-shadow: 0px 0px 10px #000;
+    width: 350px;
+     height: 350px;
+    border-radius: 50%;
 }
 img:hover{
     transform: scale(1.1);
