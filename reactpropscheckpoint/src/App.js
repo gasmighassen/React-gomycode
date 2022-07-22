@@ -5,7 +5,7 @@ import React from 'react'
 
 function App() {
   const person = {
-    Fullname: "Gasmi ghasen",
+    Fullname: "Gasmi ghassen",
     Bio: "full stack web developer",
     Profession: "web developer",
     image: "./profilePhoto.png",
