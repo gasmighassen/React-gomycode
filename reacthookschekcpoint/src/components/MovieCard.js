@@ -1,18 +1,22 @@
 import React from "react";
+import "./MovieCard.css";
 
 function MovieCard({ movie }) {
   return (
-    <div className="movie-list">
-      <div className="movie-img">
+  
+      <div className="movie-list">
+      
+        <div className="movie-poster">
         <img src={movie.poster} alt="" />
-      </div>
-      <div className="movie-title">
+        </div>
+        <div className="movie-info">
         <h1>{movie.title}</h1>
-      </div>
-      <div className="movie-description">
         <p>{movie.description}</p>
+        </div>
+        
       </div>
-    </div>
+    
+
   );
 }
 

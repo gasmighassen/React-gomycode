@@ -1,0 +1,41 @@
+
+
+img{
+    width: 300px;
+    height: 400px;
+    margin: 5px;
+}
+
+.movie-list{
+ 
+    width: 25%;
+    height: 600px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: 72px;
+   
+}
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+p ,h1{
+    font-size: 15px;
+    height: 20px;
+    margin: 0;
+}
+.movie-list:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+.movie-poster{
+    display: flex;
+    justify-content: center;
+}
