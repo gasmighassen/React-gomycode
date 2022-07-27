@@ -13,7 +13,7 @@ function MovieCard({ movie }) {
       </div>
       <div className="rating">
         <p>
-          rating: <span>{movie.rate}/10</span>
+          rating: <span>{movie.rating}/10</span>
         </p>
       </div>
     </div>
