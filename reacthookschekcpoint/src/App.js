@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MovieList from "./components/MovieList";
 import Filter from "./components/Filter";
 import AddMovie from "./components/AddMovie";
-
+import ".//App.css";
 function App() {
   const [movie, setMovie] = useState([
     {
@@ -54,16 +54,24 @@ function App() {
       rating: "7",
     },
   ]);
+
+  let addMovie = (newMovie) => {
+    setMovie([...movie, newMovie]);
+  };
   const [text, setText] = useState("");
-  const addMovie = (newmovie) => {
-    setMovie([...movie, newmovie]);
-  }
-  
+
   return (
     <div className="container">
-      <MovieList text={text} movie={movie} />
-      <Filter setText={setText}  movie={movie} />
-      <AddMovie addmovie={addMovie}/>
+      <div className="list">
+        <MovieList text={text} movie={movie} />
+      </div>
+      <div className="filter">
+        <Filter setText={setText} movie={movie} />
+      </div>
+      <div className="add">
+        {" "}
+        <AddMovie addMovie={addMovie} />
+      </div>
     </div>
   );
 }
