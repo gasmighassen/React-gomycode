@@ -11,11 +11,14 @@ const AddMovie = ({ movie, setMovie }) => {
 
   const handleChange = (e) => {
     setNewmovie({ ...newMovie, [e.target.name]: e.target.value });
+    e.preventDefault();
+   
   };
   return (
     <div className="wrapper">
       <h1>Add Movie</h1>
-      <form>
+      <div className="add-form">
+      <form >
         <input
           name="title"
           typeof="text"
@@ -50,6 +53,8 @@ const AddMovie = ({ movie, setMovie }) => {
           Add Movie
         </button>
       </form>
+      </div>
+      
     </div>
   );
 };
