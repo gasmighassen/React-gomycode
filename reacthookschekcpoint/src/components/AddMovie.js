@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import MovieCard from "./MovieCard";
 
-const AddMovie = ({ addMovie }) => {
+const AddMovie = ({ movie, setMovie }) => {
   const [newMovie, setNewmovie] = useState({
     title: "",
     description: "",
@@ -40,7 +41,14 @@ const AddMovie = ({ addMovie }) => {
           onChange={handleChange}
         ></input>
 
-        <button onClick={() => addMovie(newMovie)}>Add Movie</button>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setMovie([...movie, newMovie]);
+          }}
+        >
+          Add Movie
+        </button>
       </form>
     </div>
   );

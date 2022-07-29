@@ -5,7 +5,7 @@ function MovieList({ movie, text }) {
   return (
     <div className="container">
       {movie
-        .filter(
+        ?.filter(
           (el) =>
             el.title.toLowerCase().includes(text.toLowerCase()) ||
             el.rating.toLowerCase().includes(text.toLowerCase())

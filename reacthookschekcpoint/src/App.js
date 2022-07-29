@@ -55,9 +55,9 @@ function App() {
     },
   ]);
 
-  let addMovie = (newMovie) => {
-    setMovie([...movie, newMovie]);
-  };
+  // let addMovie = (newMovie) => {
+  //   setMovie([...movie, newMovie]);
+  // };
   const [text, setText] = useState("");
 
   return (
@@ -70,7 +70,7 @@ function App() {
       </div>
       <div className="add">
         {" "}
-        <AddMovie addMovie={addMovie} />
+        <AddMovie movie={movie} setMovie={setMovie} />
       </div>
     </div>
   );
