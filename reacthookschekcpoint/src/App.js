@@ -63,15 +63,18 @@ function App() {
   return (
     <div className="container">
       <div className="list">
-        <MovieList text={text} movie={movie} />
+        <MovieList text={text} movie={movie}  />
       </div>
-      <div className="filter">
-        <Filter setText={setText} movie={movie} />
-      </div>
-      <div className="add">
-        {" "}
-        <AddMovie addMovie={addMovie} />
-      </div>
+    <div className="filter-add">
+        <div className="filter">
+          <Filter setText={setText} movie={movie} />
+        </div>
+        <div className="add">
+          {" "}
+          <AddMovie addMovie={addMovie} />
+        </div>
+    </div>
+      
     </div>
   );
 }

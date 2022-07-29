@@ -20,3 +20,9 @@
   width: 100%;
   margin: 10px;
 }
+.filter-add{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
