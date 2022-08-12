@@ -6,11 +6,17 @@ import ".//Home.css";
 
 function Home({search}) {
     return (
-       
-        <div className="wrapper">
-            <h1>Home</h1>
-            {search ? Movies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase())).map(movie => <MovieCard movie={movie} key={movie.id}/>) : Movies.map(movie => <MovieCard movie={movie} key={movie.id}/>)}
+        <div>
+            {search === "" ? (<h1>No movies found</h1>) : 
+            (<div className="wrapper">
+                {Movies.filter(movie =>
+                movie.title.toLowerCase().includes(search.toLowerCase())
+                ).map(movie => (
+                <MovieCard key={movie.id} movie={movie} />))}
+                </div>
+            )}
         </div>
+      
     );
   }
 
