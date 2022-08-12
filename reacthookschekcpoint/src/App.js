@@ -54,16 +54,11 @@ function App() {
       rating: "7",
     },
   ]);
-
-  // let addMovie = (newMovie) => {
-  //   setMovie([...movie, newMovie]);
-  // };
   const [text, setText] = useState("");
 
   return (
     <div className="container">
       <div className="list">
-<<<<<<< HEAD
         <MovieList text={text} movie={movie} />
       </div>
       <div className="filter">
@@ -72,20 +67,7 @@ function App() {
       <div className="add">
         {" "}
         <AddMovie movie={movie} setMovie={setMovie} />
-=======
-        <MovieList text={text} movie={movie}  />
->>>>>>> 0f33824085f786bf2441e7bdd9db1bc8f90590d5
-      </div>
-    <div className="filter-add">
-        <div className="filter">
-          <Filter setText={setText} movie={movie} />
-        </div>
-        <div className="add">
-          {" "}
-          <AddMovie addMovie={addMovie} />
-        </div>
-    </div>
-      
+      </div> 
     </div>
   );
 }
