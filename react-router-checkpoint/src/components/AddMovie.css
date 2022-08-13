@@ -1,0 +1,10 @@
+.add-btn{
+    width: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px gray solid;
+margin-left: 15px;
+height: 350px;
+align-self: center;
+}

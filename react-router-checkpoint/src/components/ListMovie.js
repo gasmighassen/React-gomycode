@@ -6,6 +6,7 @@ export const Movies = [
       poster:
         "https://magarila.com/wp-content/uploads/2022/06/%E2%80%98NOPE-Poster-2.jpg",
       rating: "2",
+      trailer: "https://www.youtube.com/embed/In8fuzj3gck",
     },
     {
       title: "Thor: Love and Thunder",

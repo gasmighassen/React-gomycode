@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import "./AddMovie.css";
 
 function AddMovie({ addMovies }) {
   const [show, setShow] = useState(false);
@@ -25,8 +26,11 @@ function AddMovie({ addMovies }) {
 
   return (
     <>
-      <div className="movie-list" onClick={handleShow}>
-        <img src="https://cdn1.iconfinder.com/data/icons/ui-colored-1/100/UI__2-1024.png" />
+      <div className="add-btn">
+        <Button variant="primary" onClick={handleShow}>
+          Add Movie
+        </Button>
+
       </div>
 
       <Modal show={show} onHide={handleClose}>
