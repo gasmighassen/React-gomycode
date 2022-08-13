@@ -1,23 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import MovieCard from "./MovieCard";
-import {Movies} from "./ListMovie";
+import { Movies } from "./ListMovie";
 import ".//Home.css";
+import AddMovie from "./AddMovie";
 
+function Home({ text, rate }) {
+  const [moviesToMap, setMoviesToMap] = useState(Movies);
+  const addMovies = (newMovie) => {
+    setMoviesToMap([...moviesToMap, newMovie]);
+  };
+  return (
+    <div className="wrapper">
+      <AddMovie addMovies={addMovies} />
 
-function Home({search}) {
-    return (
-        <div>
-            {search === "" ? (<h1>No movies found</h1>) : 
-            (<div className="wrapper">
-                {Movies.filter(movie =>
-                movie.title.toLowerCase().includes(search.toLowerCase())
-                ).map(movie => (
-                <MovieCard key={movie.id} movie={movie} />))}
-                </div>
-            )}
-        </div>
-      
-    );
-  }
+      {moviesToMap
+        .filter(
+          (el) =>
+            el.title.toLowerCase().includes(text.toLowerCase()) &&
+            el.rating >= rate
+        )
+        .map((el) => (
+          <MovieCard movie={el} />
+        ))}
+    </div>
+  );
+}
 
-export default Home
+export default Home;
