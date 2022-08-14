@@ -8,10 +8,15 @@ const Description = () => {
     <div className="description">
       <h1>{movie.title}</h1>
       <p>{movie.description}</p>
-      <iframe width="560" height="315" src={movie.trailer} title="YouTube video player" 
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-
-      </iframe>
+      <iframe
+        width="560"
+        height="315"
+        src={movie.trailer}
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
   );
 };

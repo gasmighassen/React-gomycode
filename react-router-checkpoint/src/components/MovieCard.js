@@ -17,7 +17,7 @@ function MovieCard({ movie }) {
         <p>
           rating:
           <ReactStars
-            count={10}
+            count={5}
             value={movie.rating}
             edit={false}
             // onChange={ratingChanged}
