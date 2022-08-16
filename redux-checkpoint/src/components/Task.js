@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 
+
 function Task({ todo }) {
   const dispatch = useDispatch();
   const [newTask, setNewTask] = useState({
@@ -39,7 +40,7 @@ function Task({ todo }) {
   };
 
   return (
-    <div>
+    <div className="task-container">
       <div key={todo.id} className="items">
         {todo.isDone ? <s>{todo.description}</s> : todo.description}
         <button onClick={handleShow}></button>
@@ -56,9 +57,10 @@ function Task({ todo }) {
             <input
               name="isDone"
               type="checkbox"
-              defaultChecked={todo.isDone}
+              Checked={todo.isDone}
               onChange={handleChange}
             />
+           
             <button type="submit">Edit</button>
           </form>
         </div>
