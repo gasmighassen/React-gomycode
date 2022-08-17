@@ -43,19 +43,7 @@ const Reducer = (state = intialState, action) => {
           return todo;
         }),
       };
-    case "COMPLETED_TODO":
-      return {
-        ...state,
-        todo: state.todo.map((todo) => {
-          if (todo.id === action.payload.id) {
-            return {
-              ...todo,
-              isDone: action.payload.isDone,
-            };
-          }
-          return todo;
-        }),
-      };
+
     default:
       return state;
   }
