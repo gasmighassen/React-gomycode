@@ -8,13 +8,13 @@ const ListTask = () => {
 
   return (
     <div className="list-tasks">
-      <button className="all" onClick={() => setFilter("all")}>
+      <button className="filter-btn" onClick={() => setFilter("all")}>
         All
       </button>
-      <button className="completed" onClick={() => setFilter("completed")}>
+      <button className="filter-btn" onClick={() => setFilter("completed")}>
         Completed
       </button>
-      <button className="uncompleted" onClick={() => setFilter("uncompleted")}>
+      <button className="filter-btn" onClick={() => setFilter("uncompleted")}>
         Uncompleted
       </button>
       {todo.map((todo) => {
