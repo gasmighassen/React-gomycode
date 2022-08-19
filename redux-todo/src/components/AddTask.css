@@ -1,0 +1,37 @@
+.add-todo {
+  background-image: linear-gradient(#f39898, rgb(205, 147, 147));
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  padding: 30px 0;
+  gap: 10px;
+}
+.add-todo input {
+  border: none;
+  border-radius: 50px;
+  background: auto;
+  width: 40%;
+}
+
+.add-todo input::placeholder {
+  text-align: center;
+}
+
+.add-todo input:focus {
+  text-align: center;
+}
+
+/*button inside the input*/
+.add-todo button {
+  border: none;
+  border-radius: 50px;
+  width: 10%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*remove placeholder text on focus*/
+.add-todo input:focus::placeholder {
+  text-align: center;
+  color: transparent;
+}
