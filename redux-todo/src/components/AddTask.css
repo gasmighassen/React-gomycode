@@ -11,6 +11,7 @@
   border-radius: 50px;
   background: auto;
   width: 40%;
+  text-align: center;
 }
 
 .add-todo input::placeholder {

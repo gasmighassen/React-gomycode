@@ -8,8 +8,8 @@ function Task({ todo }) {
   const dispatch = useDispatch();
   const [newTask, setNewTask] = useState({
     id: todo.id,
-    description: "",
-    isDone: false,
+    description: todo.description,
+    isDone: todo.isDone,
   });
   const [show, setShow] = useState(false);
   const handleShow = (e) => {
@@ -20,7 +20,7 @@ function Task({ todo }) {
     <div className="task">
       <div className="task-description">
         <p>
-          {todo.id}. {todo.description}
+          {todo.id}.{todo.isDone ? <s>{todo.description}</s> : todo.description}
         </p>
       </div>
       <button onClick={handleShow}>Edit</button>
@@ -34,6 +34,7 @@ function Task({ todo }) {
               setNewTask({ ...newTask, description: e.target.value })
             }
           />
+          <span>Check if done</span>
           <input
             type="checkbox"
             name="isDone"

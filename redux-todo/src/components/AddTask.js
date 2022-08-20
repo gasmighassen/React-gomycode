@@ -10,11 +10,16 @@ function AddTask() {
   const handleChange = (e) => {
     setTask(e.target.value);
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addTodo(task));
+    setTask("");
+  };
 
   return (
     <div className="add-todo">
       <input type="text" onChange={(e) => handleChange(e)} placeholder="..." />
-      <button type="" onClick={() => dispatch(addTodo(task))}>
+      <button type="submit" onClick={handleSubmit}>
         Add
       </button>
     </div>

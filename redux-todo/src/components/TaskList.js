@@ -16,17 +16,11 @@ function TaskList() {
         <button onClick={() => setFilter("active")}>Active</button>
         <button onClick={() => setFilter("completed")}>Completed</button>
       </div>
-      {todos.map((todos) => {
-        if (filter === "all") {
-          return <Task key={todos.id} todo={todos} />;
-        } else if (filter === "active") {
-          if (!todos.isDone) {
-            return <Task key={todos.id} todo={todos} />;
-          }
-        } else if (filter === "completed") {
-          if (todos.isDone) {
-            return <Task key={todos.id} todos={todos} />;
-          }
+      {todos.map((todo) => {
+        if (filter === "all" || (filter === "active" && !todo.isDone)) {
+          return <Task key={todo.id} todo={todo} />;
+        } else if (filter === "completed" && todo.isDone) {
+          return <Task key={todo.id} todo={todo} />;
         }
       })}
     </div>
