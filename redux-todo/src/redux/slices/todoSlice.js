@@ -14,9 +14,12 @@ export const todoSlice = createSlice({
       });
     },
     editTodo: (state, action) => {
-      const todo = state.find((todo) => todo.id === action.payload.id);
-      todo.description = action.payload.description;
-      todo.isDone = action.payload.isDone;
+      let i = state.findIndex((el) => el.id === action.payload.id);
+      state[i] = {
+        ...state[i],
+        description: action.payload.description,
+        isDone: action.payload.isDone,
+      };
     },
   },
 });

@@ -7,20 +7,13 @@ function Task({ todo }) {
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
   const [newTask, setNewTask] = useState({
-    id: todos.id,
+    id: todo.id,
     description: "",
-    isDone: todos.isDone,
+    isDone: false,
   });
   const [show, setShow] = useState(false);
   const handleShow = (e) => {
     setShow(!show);
-  };
-  const handleChange = (e) => {
-    setNewTask({
-      ...newTask,
-      [e.target.name]:
-        [e.target.type] === "checkbox" ? e.target.checked : e.target.value,
-    });
   };
 
   return (
@@ -37,13 +30,17 @@ function Task({ todo }) {
             type="text"
             name="description"
             value={newTask.description}
-            onChange={handleChange}
+            onChange={(e) =>
+              setNewTask({ ...newTask, description: e.target.value })
+            }
           />
           <input
             type="checkbox"
             name="isDone"
             checked={newTask.isDone}
-            onChange={handleChange}
+            onChange={(e) =>
+              setNewTask({ ...newTask, isDone: !newTask.isDone })
+            }
           />
           <button onClick={() => dispatch(editTodo(newTask))}>save</button>
         </div>
