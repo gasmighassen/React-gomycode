@@ -1,0 +1,26 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 30px;
+  padding-top: 10%;
+  width: 80%;
+  height: 100vh;
+}
+.search {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.search ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.search ul li {
+  display: inline-block;
+  margin: 15px;
+  padding: 10px;
+}

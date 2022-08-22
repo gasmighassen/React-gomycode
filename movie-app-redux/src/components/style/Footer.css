@@ -1,0 +1,15 @@
+.footer {
+  border-top: 1px solid #000;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+.footer h1 {
+  color: #000;
+  font-size: 1em;
+  font-weight: bold;
+}

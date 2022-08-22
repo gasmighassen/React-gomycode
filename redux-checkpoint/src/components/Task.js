@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import "./Task.css";
 
 function Task({ todo }) {
   const dispatch = useDispatch();
@@ -42,7 +43,7 @@ function Task({ todo }) {
     <div className="task-container">
       <div key={todo.id} className="items">
         {todo.isDone ? <s>{todo.description}</s> : todo.description}
-        <button onClick={handleShow}></button>
+        <button onClick={handleShow}>update</button>
       </div>
       {show && (
         <div className="edit-form">

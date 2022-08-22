@@ -21,7 +21,7 @@ const AddTask = () => {
     setDescription("");
   };
   return (
-    <div>
+    <div className="add-form">
       <input type="text" value={description} onChange={handleChange} />
       <button onClick={handleSubmit}>Add</button>
     </div>
